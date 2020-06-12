@@ -26,7 +26,7 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
            "bottle", "bus", "car", "cat", "chair", "cow", "diningtable",
            "dog", "horse", "motorbike", "person", "pottedplant", "sheep",
            "sofa", "train", "tvmonitor"]
-IGNORE = set(["sheep", "background", "aeroplane", "boat", "horse"])
+IGNORE = set(["sheep", "background", "aeroplanqe", "boat", "horse"])
 COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 
 # load our serialized model from disk
@@ -88,10 +88,10 @@ while True:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
             engine.say(label)
             engine.runAndWait()
-            print(f'This is a {label}')
+            # print(f'This is a {label}')
 
     # show the output frame
-    cv2.imshow("Frame", frame)
+    # cv2.imshow("Frame", frame)
     key = cv2.waitKey(1) & 0xFF
 
     # if the `q` key was pressed, break from the loop
@@ -107,5 +107,5 @@ print("[INFO] elapsed time: {:.2f}".format(fps.elapsed()))
 print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
 
 # do a bit of cleanup
-cv2.destroyAllWindows()
+# cv2.destroyAllWindows()
 vs.stop()
