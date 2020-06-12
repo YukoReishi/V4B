@@ -88,10 +88,10 @@ while True:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
             engine.say(label)
             engine.runAndWait()
-            print(f'This is a {label}')
+            # print(f'This is a {label}')
 
     # show the output frame
-    cv2.imshow("Frame", frame)
+    # cv2.imshow("Frame", frame)
     key = cv2.waitKey(1) & 0xFF
 
     # if the `q` key was pressed, break from the loop
@@ -107,5 +107,5 @@ print("[INFO] elapsed time: {:.2f}".format(fps.elapsed()))
 print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
 
 # do a bit of cleanup
-cv2.destroyAllWindows()
+# cv2.destroyAllWindows()
 vs.stop()
